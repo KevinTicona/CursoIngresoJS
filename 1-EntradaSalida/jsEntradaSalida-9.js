@@ -15,5 +15,6 @@ function mostrarAumento()
 	elsueldo=elsueldo+aumento;
 	
 	resultado.value=elsueldo;
+	
 
 }

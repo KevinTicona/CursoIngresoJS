@@ -4,6 +4,7 @@ function mostrar()
 	var descuento;
 	var resultado;
 	var multiplicacion;
+	var resultadofinal;
 
 	precio = prompt("Ingrese el precio");
 	descuento = prompt("Ingrese el Porcentaje del descuento que quiere realizar");
@@ -17,6 +18,5 @@ function mostrar()
 
 	resultado= multiplicacion/100;
 
-
-	elPrecioFinal= precio - resultado;
+	resultado=document.getElementById("elPrecioFinal").value;
 }
