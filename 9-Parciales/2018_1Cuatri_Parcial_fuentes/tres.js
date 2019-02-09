@@ -18,5 +18,5 @@ function mostrar()
 
 	resultado= multiplicacion/100;
 
-	resultado=document.getElementById("elPrecioFinal").value;
+	document.getElementById("elPrecioFinal").value=resultado;
 }
