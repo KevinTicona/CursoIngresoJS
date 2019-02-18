@@ -6,8 +6,6 @@ function mostrar()
 	var cantidadDeProductos;
 	var totalDeCompra;
 	var tipoDePago;
-	var resultado;
-	var recargo;
 	var resultadoFinal;
 
 	cantidadDeProductos=prompt("Ingrese el total de productos que compro.");
@@ -17,21 +15,17 @@ function mostrar()
 
 	cantidadDeProductos=parseInt(cantidadDeProductos);
 	totalDeCompra=parseInt(totalDeCompra);
-	tipoDePago=parseInt(tipoDePago);
 
 	
 
 	if(cantidadDeProductos>2){
-		resultado=totalDeCompra*10/100;
-		resultadoFinal=totalDeCompra-resultado;
+		resultadoFinal= totalDeCompra-(totalDeCompra*0.1);
 		if(totalDeCompra>2000){
-			resultado=totalDeCompra*25/100;
-			resultadoFinal=totalDeCompra-resultado;
-			if(tipoDePago=2){
-			recargo=resultadoFinal*10/100;
-			resultadoFinal=resultadoFinal+recargo;
+			resultadoFinal= resultadoFinal-(resultadoFinal*0.15);
+			if(tipoDePago == "2"){
+			resultadoFinal= resultadoFinal+(resultadoFinal*0.1);
 			}
 		}
 	}
-	alert("Su pago seria de "+resultadoFinal);
+	alert("Su total a pagar es "+resultadoFinal);
 }
