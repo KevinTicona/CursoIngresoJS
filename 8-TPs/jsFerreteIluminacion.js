@@ -14,6 +14,7 @@ function CalcularPrecio ()
 	var precioConDescuento;
 	var marcaDeLamparita;
 	var totalDeCompra;
+	var ingresoBruto;
 
 	lamparitas=parseInt(lamparitas);
 	totalDeCompra=parseInt(totalDeCompra);
@@ -27,17 +28,37 @@ function CalcularPrecio ()
 	if (lamparitas>5) {
 		precioConDescuento = totalDeCompra-(totalDeCompra*50/100);
 	}else{
-		if(lamparitas==5){
+			if(lamparitas==5){
 			precioConDescuento = totalDeCompra-(totalDeCompra*30/100);
 			if(marcaDeLamparita=="ArgentinaLuz"){
 				precioConDescuento = totalDeCompra-(totalDeCompra*40/100);
 			}
 		}else{
-				if(lamparitas==4){
+				if(lamparitas == 4)
+				{
 					precioConDescuento = totalDeCompra-(totalDeCompra*20/100);
 				if(marcaDeLamparita=="ArgentinaLuz" || marcaDeLamparita=="FelipeLamparas"){
 				precioConDescuento = totalDeCompra-(totalDeCompra*25/100);
 			}
+			}else{
+					if (lamparitas == 3){
+					precioConDescuento = totalDeCompra-(totalDeCompra*0.05/100);
+					if(marcaDeLamparita=="ArgentinaLuz"){
+						precioConDescuento = totalDeCompra-(totalDeCompra*0.15/100);
+					}
+					if (marcaDeLamparita=="FelipeLamparas"){
+						precioConDescuento = totalDeCompra-(totalDeCompra*0.1/100);
+					}
+					}
+				}
+			
 		}
+	}
+
 	precioDescuento.value=precioConDescuento;
+
+	if(precioConDescuento>=120){
+	ingresoBruto = precioConDescuento+(precioConDescuento*0.1/100);
+	alert("IIBB Usted pago"+ingresoBruto)
+	}
 }
