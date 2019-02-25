@@ -17,7 +17,7 @@ function mostrar()
 			positivo=positivo+numero;
 		}
 
-		respuesta=promt("Desea continuar ingrese: si");
+		respuesta=prompt("Desea continuar ingrese: si");
 	}
 
 

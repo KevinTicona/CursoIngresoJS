@@ -6,15 +6,15 @@ function mostrar()
 	var respuesta="si";
 	var numero;
 
-	while(respuesta =="si"){
+	while(respuesta == "si"){
 		numero=prompt("Ingrese un numero");
 		numero=parseInt(numero);
-		contador=contador+1;
 		acumulador=numero+acumulador;
-		respuesta=promt("Desea continuar ingrese: si");
+		contador=contador+1;
+		respuesta=prompt("Desea continuar ingrese: si");
 		}
 
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
+document.getElementById("suma").value=acumulador;
+document.getElementById("promedio").value=acumulador/contador;
 
 }//FIN DE LA FUNCIÓN
